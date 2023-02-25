@@ -5,28 +5,30 @@ using UnityEngine;
 // 低血糖
 public class Hypoglycemia : Disease
 {
-    private void Start()
-    {
-        InitAllSymptoms();
-        InitSymptoms();
-    }
-
-    public void InitAllSymptoms()
+    public override void InitAllSymptoms()
     {
         AllSymptoms.Add("心慌");
         AllSymptoms.Add("脸色苍白");
         AllSymptoms.Add("出汗");
         AllSymptoms.Add("腹部饥饿感");
     }
-
-    public void InitSymptoms()
+    public override void InitSayText(string symptoms)
     {
-        int index;
-        for (int i = 0; i < 2; i++)
+        switch (symptoms)
         {
-            index = Random.Range(0, AllSymptoms.Count);
-            Symptoms.Add(AllSymptoms[index]);
-            AllSymptoms.RemoveAt(index);
+            case "心慌":
+                describeText = "我头好晕啊，要死掉了！！！！！！";
+                break;
+            case "脸色苍白":
+                describeText = "有点耳鸣！！！";
+                break;
+            case "出汗":
+                describeText = "失眠了！！！";
+                break;
+            case "腹部饥饿感":
+                describeText = "晚上多梦！！！！";
+                break;
         }
     }
+    
 }

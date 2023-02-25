@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class Patient : MonoBehaviour
 {
-    public string CurrentDisease;
+    public string currentDisease;
+
+    public Sprite currentRoleFace;
+
+    string sayText;
+
     private void Start()
     {
-        CurrentDisease = DiseaseManager.InitDisease();
-        AddDisease(CurrentDisease);
+        currentDisease = DiseaseManager.InitDisease();
+        AddDisease(currentDisease);
+        DialogueManager.Instance.patientFace = currentRoleFace;
+        
     }
     public void AddDisease(string disease)
     {
@@ -22,4 +29,13 @@ public class Patient : MonoBehaviour
                 break;
         }
     }
+    //public void AddSayText()
+    //{
+    //    Disease curDisease = GetComponent<Disease>();
+    //    //for (int i = 0; i < curDisease.; i++)
+    //    //{
+
+    //    //}
+    //    var a = curDisease.AllSymptoms[0];
+    //}
 }

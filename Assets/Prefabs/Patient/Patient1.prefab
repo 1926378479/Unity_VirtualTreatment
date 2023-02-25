@@ -1186,7 +1186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12057a85b5d4c024d954e0006ad15ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentDisease: 
+  currentDisease: 
+  currentRoleFace: {fileID: 21300000, guid: 8680cabb45147cd4098485c2df8aa80d, type: 3}
 --- !u!1 &2743889787750130678
 GameObject:
   m_ObjectHideFlags: 0

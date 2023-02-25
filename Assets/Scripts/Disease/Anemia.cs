@@ -5,13 +5,7 @@ using UnityEngine;
 // 贫血
 public class Anemia : Disease
 {
-    private void Start()
-    {
-        InitAllSymptoms();
-        InitSymptoms();
-    }
-
-    public void InitAllSymptoms()
+    public override void InitAllSymptoms()
     {
         AllSymptoms.Add("头晕");
         AllSymptoms.Add("耳鸣");
@@ -19,14 +13,24 @@ public class Anemia : Disease
         AllSymptoms.Add("多梦");
     }
 
-    public void InitSymptoms()
+
+    public override void InitSayText(string symptoms)
     {
-        int index;
-        for (int i = 0; i < 2; i++)
+        
+        switch (symptoms)
         {
-            index = Random.Range(0, AllSymptoms.Count);
-            Symptoms.Add(AllSymptoms[index]);
-            AllSymptoms.RemoveAt(index);
+            case "头晕":
+                describeText = "我头好晕啊，要死掉了！！！！！！";
+                break;
+            case "耳鸣":
+                describeText = "有点耳鸣！！！";
+                break;
+            case "失眠":
+                describeText = "失眠了！！！";
+                break;
+            case "多梦":
+                describeText = "晚上多梦！！！！";
+                break;
         }
     }
 }
