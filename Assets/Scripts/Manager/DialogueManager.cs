@@ -18,10 +18,6 @@ public class DialogueManager : Singleton<DialogueManager>
 
     private void Start()
     {
-        //patientFace = Patient.currentRoleFace;
-        //StartCoroutine(SetTextUI(time));
-
-
     }
     private void OnEnable()
     {
@@ -33,11 +29,11 @@ public class DialogueManager : Singleton<DialogueManager>
         {
             index = 0;
             gameObject.SetActive(false);
+            UIManager.Instance.curePanel.SetActive(true);
             return;
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("°´ÏÂ¿Õ¸ñ");
             if (textFinished && !cancelTyping)
             {
                 StartCoroutine(SetTextUI(time));

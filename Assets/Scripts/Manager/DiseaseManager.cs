@@ -6,7 +6,7 @@ using UnityEngine;
 public class DiseaseManager : MonoBehaviour
 {
     
-    public static string[] DiseaseGroup = new string[] { "Anemia" , "Hypoglycemia" };
+    public static string[] DiseaseGroup = new string[] { "Æ¶ÑªÖ¢" , "µÍÑªÌÇ" };
 
     public static string InitDisease()
     {

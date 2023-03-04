@@ -7,26 +7,55 @@ public class Hypoglycemia : Disease
 {
     public override void InitAllSymptoms()
     {
-        AllSymptoms.Add("心慌");
-        AllSymptoms.Add("脸色苍白");
         AllSymptoms.Add("出汗");
-        AllSymptoms.Add("腹部饥饿感");
+        AllSymptoms.Add("脸色苍白");
+        AllSymptoms.Add("眼前发黑");
+        AllSymptoms.Add("乏力");
     }
-    public override void InitSayText(string symptoms)
+    public override void InitSayText(string symptoms, int randomIndex)
     {
         switch (symptoms)
         {
-            case "心慌":
-                describeText = "我头好晕啊，要死掉了！！！！！！";
+            case "出汗":
+                if (randomIndex == 0)
+                {
+                    describeText = "运动后，不热却疯狂出汗";
+                }
+                else
+                {
+                    describeText = "运动后，会出很多的冷汗";
+                }
+                    
                 break;
             case "脸色苍白":
-                describeText = "有点耳鸣！！！";
+                if (randomIndex == 0)
+                {
+                    describeText = "之前和朋友去运动，结束后，他说我脸色有点白";
+                }
+                else
+                {
+                    describeText = "体育课跑步结束后，边上的人说我脸色苍白";
+                }
                 break;
-            case "出汗":
-                describeText = "失眠了！！！";
+            case "眼前发黑":
+                if (randomIndex == 0)
+                {
+                    describeText = "没吃早饭，中午去吃饭的时候眼前有点发黑";
+                }
+                else
+                {
+                    describeText = "没吃中饭，去吃晚饭的时候眼前一黑，差点倒地上了";
+                }
                 break;
-            case "腹部饥饿感":
-                describeText = "晚上多梦！！！！";
+            case "乏力":
+                if (randomIndex == 0)
+                {
+                    describeText = "发作时会觉得四肢乏力";
+                }
+                else
+                {
+                    describeText = "会觉得身体使不上力气";
+                }
                 break;
         }
     }

@@ -2,40 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Patient : MonoBehaviour
+public class Patient : Singleton<Patient>
 {
     public string currentDisease;
 
     public Sprite currentRoleFace;
 
-    string sayText;
-
     private void Start()
     {
         currentDisease = DiseaseManager.InitDisease();
         AddDisease(currentDisease);
-        DialogueManager.Instance.patientFace = currentRoleFace;
-        
     }
     public void AddDisease(string disease)
     {
         switch (disease)
         {
-            case "Anemia":
+            case "Æ¶ÑªÖ¢":
                 gameObject.AddComponent<Anemia>();
                 break;
-            case "Hypoglycemia":
+            case "µÍÑªÌÇ":
                 gameObject.AddComponent<Hypoglycemia>();
                 break;
         }
     }
-    //public void AddSayText()
-    //{
-    //    Disease curDisease = GetComponent<Disease>();
-    //    //for (int i = 0; i < curDisease.; i++)
-    //    //{
-
-    //    //}
-    //    var a = curDisease.AllSymptoms[0];
-    //}
 }
