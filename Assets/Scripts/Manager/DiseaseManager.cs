@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class DiseaseManager : MonoBehaviour
 {
-    
-    public static string[] DiseaseGroup = new string[] { "Æ¶ÑªÖ¢" , "µÍÑªÌÇ" };
+
+    public static List<string> DiseaseGroup = new List<string>() { "Æ¶ÑªÖ¢", "µÍÑªÌÇ", "³¦Î¸Ñ×", "±Çñ¼Ñ×", "¸ÐÃ°", "É³ÑÛ" };
 
     public static string InitDisease()
     {
-        return DiseaseGroup[Random.Range(0, DiseaseGroup.Length)];
+        return DiseaseGroup[Random.Range(0, DiseaseGroup.Count)];
     }
 }

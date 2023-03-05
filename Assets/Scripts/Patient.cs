@@ -23,6 +23,20 @@ public class Patient : Singleton<Patient>
             case "µÍÑªÌÇ":
                 gameObject.AddComponent<Hypoglycemia>();
                 break;
+            case "³¦Î¸Ñ×":
+                gameObject.AddComponent<StomachFlu>();
+                break;
+            case "±Çñ¼Ñ×":
+                gameObject.AddComponent<Nasosinusitis>();
+                break;
+            case "¸ÐÃ°":
+                gameObject.AddComponent<Cold>();
+                break;
+            case "É³ÑÛ":
+                gameObject.AddComponent<Trachoma>();
+                break;
+
+
         }
     }
 }

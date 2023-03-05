@@ -9,6 +9,8 @@ public class Disease : MonoBehaviour
     public bool isInit = false;
 
     public int createSymNum = 4;
+
+    public static string diseaseDescribe;
     // ËùÓÐÖ¢×´
     public List<string> AllSymptoms = new List<string>();
 
@@ -22,6 +24,7 @@ public class Disease : MonoBehaviour
             isInit = true;
             InitAllSymptoms();
             InitSymptoms();
+            InitDescribe();
         }
     }
 
@@ -50,5 +53,9 @@ public class Disease : MonoBehaviour
     {
         DialogueManager.Instance.textList.Add("Patient");
         DialogueManager.Instance.textList.Add(text);
+    }
+    public virtual void InitDescribe()
+    {
+
     }
 }

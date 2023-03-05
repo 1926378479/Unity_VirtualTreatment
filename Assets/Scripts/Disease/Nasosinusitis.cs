@@ -3,63 +3,62 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 低血糖
+/// 鼻窦炎
 /// </summary>
-public class Hypoglycemia : Disease
+public class Nasosinusitis : Disease
 {
     public override void InitAllSymptoms()
     {
-        AllSymptoms.Add("出汗");
-        AllSymptoms.Add("脸色苍白");
-        AllSymptoms.Add("眼前发黑");
-        AllSymptoms.Add("乏力");
+        AllSymptoms.Add("鼻塞");
+        AllSymptoms.Add("脓涕");
+        AllSymptoms.Add("味觉减退");
+        AllSymptoms.Add("嗅觉减退");
     }
     public override void InitSayText(string symptoms, int randomIndex)
     {
         switch (symptoms)
         {
-            case "出汗":
+            case "鼻塞":
                 if (randomIndex == 0)
                 {
-                    describeText = "运动后，不热却疯狂出汗";
+                    describeText = "鼻子基本一天到晚都是塞着的，很难受";
                 }
                 else
                 {
-                    describeText = "运动后，会出很多的冷汗";
+                    describeText = "鼻子通不了气，基本只能用嘴呼吸";
                 }
-                    
+
                 break;
-            case "脸色苍白":
+            case "脓涕":
                 if (randomIndex == 0)
                 {
-                    describeText = "之前和朋友去运动，结束后，他说我脸色有点白";
+                    describeText = "早上起来会流很多鼻涕，止不住";
                 }
                 else
                 {
-                    describeText = "体育课跑步结束后，边上的人说我脸色苍白";
-                }
-                break;
-            case "眼前发黑":
-                if (randomIndex == 0)
-                {
-                    describeText = "没吃早饭，中午去吃饭的时候眼前有点发黑";
-                }
-                else
-                {
-                    describeText = "没吃中饭，去吃晚饭的时候眼前一黑，差点倒地上了";
+                    describeText = "有时候半夜醒来，鼻子会流非常多的鼻涕";
                 }
                 break;
-            case "乏力":
+            case "味觉减退":
                 if (randomIndex == 0)
                 {
-                    describeText = "发作时会觉得四肢乏力";
+                    describeText = "昨天鼻子不舒服，吃什么都感觉味道很淡";
                 }
                 else
                 {
-                    describeText = "会觉得身体使不上力气";
+                    describeText = "最近吃饭总感觉菜都没什么味道";
+                }
+                break;
+            case "嗅觉减退":
+                if (randomIndex == 0)
+                {
+                    describeText = "最近基本闻不到什么味道，感觉嗅觉不太行了";
+                }
+                else
+                {
+                    describeText = "近几天，鼻子总塞，闻不到味道";
                 }
                 break;
         }
     }
-    
 }

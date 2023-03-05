@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// 贫血
+/// <summary>
+/// 贫血
+/// </summary>
 public class Anemia : Disease
 {
     public override void InitAllSymptoms()
@@ -71,5 +73,14 @@ public class Anemia : Disease
                 }
                 break;
         }
+    }
+    public override void InitDescribe()
+    {
+        diseaseDescribe = "贫血是指人体外周血红细胞容量减少，" +
+            "低于正常范围下限的一种常见的临床症状。" +
+            "由于红细胞容量测定较复杂，临床上常以血红蛋白浓度来代替。" +
+            "贫血的病因，血液携氧能力下降的程度，血容量下降的程度，发生贫血" +
+            "的速度和血液、循环、呼吸等系统的代偿和耐受能力均会" +
+            "影响贫血的临床表现。最早出现的症状有头晕、乏力、困倦；而最常见、最突出的体征是面色苍白。";
     }
 }
