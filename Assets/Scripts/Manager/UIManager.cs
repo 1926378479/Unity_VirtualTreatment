@@ -10,6 +10,7 @@ public class UIManager : Singleton<UIManager>
 
     public GameObject resultPanel;
     public GameObject diseasePanel;
+    public GameObject backMainBtn;
 
     private void Start()
     {
@@ -34,6 +35,7 @@ public class UIManager : Singleton<UIManager>
     }
     public void RestartGame()
     {
+        AudioManager.Instance.PlayBtnClick();
         for (int i = 0; i < DiseasePanel.Instance.diseasePhotos.Count; i++)
         {
             if (DiseasePanel.Instance.diseasePhotos[i].lockImage.activeSelf)
@@ -51,5 +53,16 @@ public class UIManager : Singleton<UIManager>
         //PatientManager.Instance.CreatPatient();
         //GameManager.Instance.canStartGame = true;
         SceneManager.LoadScene(1);
+    }
+    public void BackMainScene()
+    {
+        AudioManager.Instance.PlayBtnClick();
+        StartCoroutine(LoadMainScene());
+    }
+
+    IEnumerator LoadMainScene()
+    {
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene(0);
     }
 }
