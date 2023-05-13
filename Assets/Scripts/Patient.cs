@@ -19,6 +19,8 @@ public class Patient : Singleton<Patient>
         {
             case "贫血症":
                 gameObject.AddComponent<Anemia>();
+                GptTurboScript.Instance.Prompt = "我是一名该死的老师，喜欢辱骂学生";
+                GptTurboScript.Instance.AddSystem();
                 break;
             case "低血糖":
                 gameObject.AddComponent<Hypoglycemia>();

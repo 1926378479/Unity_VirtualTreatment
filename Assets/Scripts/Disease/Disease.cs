@@ -39,7 +39,7 @@ public class Disease : MonoBehaviour
         {
             index = Random.Range(0, AllSymptoms.Count);
             InitSayText(AllSymptoms[index],Random.Range(0,2));
-            AddSayText(describeText);
+            //AddSayText(describeText);
             Symptoms.Add(AllSymptoms[index]);
             AllSymptoms.RemoveAt(index);
         }

@@ -28,7 +28,7 @@ public class UIManager : Singleton<UIManager>
 
     public void HideAllPanel()
     {
-        HidePanel(dialoguePanel);
+        //HidePanel(dialoguePanel);
         HidePanel(curePanel);
         HidePanel(resultPanel);
         HidePanel(diseasePanel);

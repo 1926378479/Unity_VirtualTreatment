@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canStartGame)
+        if (Input.GetKeyDown(KeyCode.Return) && canStartGame)
         {
             canStartGame = false;
             UIManager.Instance.dialoguePanel.SetActive(true);
